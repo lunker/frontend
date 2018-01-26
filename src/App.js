@@ -1,6 +1,8 @@
 const React=require('react');
 const ReactDOM=require('react-dom');
-import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+// import { Router, Route, IndexRoute, browserHistory } from 'react-router';
+import {BrowserRouter} from 'react-router-dom';
+
 
 
 
@@ -17,9 +19,7 @@ class App extends React.Component{
 ReactDOM.render(
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <IndexRoute component={Home}/>
-      <Route path="about" component={About}/>
-      <Route path="post" component={Posts}/>
+      <IndexRoute component={App}/>
     </Route>
   </Router>,
   document.getElementById('root')

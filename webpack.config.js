@@ -6,14 +6,14 @@ module.exports = {
     ], // -- webpack을 수행할 bundle 대상 js file 들
 
     output : {
-        path: __dirname + '/dist',
+        path: __dirname + '/public/',
         filename : 'bundle.js'
     }, // entry에 지정된 파일들을 bundling한 결과물 처리
 
     devServer: {
         inline: true,
         port: 10000,
-        contentBase: __dirname + '/dist'
+        contentBase: __dirname + '/public/'
     },
 
     plugins: [
