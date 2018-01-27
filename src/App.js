@@ -1,26 +1,24 @@
-const React=require('react');
-const ReactDOM=require('react-dom');
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
+import PostContainer from './containers/PostContainer';
+
 // import { Router, Route, IndexRoute, browserHistory } from 'react-router';
-import {BrowserRouter} from 'react-router-dom';
-
-
+// import {BrowserRouter, Route, } from 'react-router-dom';
 
 
 class App extends React.Component{
   render(){
     return(
       <div>
-        App!!!
+        <span>App!!!</span>
+        <PostContainer />
       </div>
     );
   }
 }
 
+
 ReactDOM.render(
-  <Router history={browserHistory}>
-    <Route path="/" component={App}>
-      <IndexRoute component={App}/>
-    </Route>
-  </Router>,
+  <App />,
   document.getElementById('root')
 );
