@@ -20,8 +20,10 @@ class Project extends Component {
       }
     }).then((response)=>{
       console.log(response);
+      console.log(response.status);
+      console.log(response.data);
     });
-  }// end method 
+  }// end method
 
   render(){
     return (
